@@ -1,0 +1,219 @@
+<Recognition>
+    name: "Face Recognition"
+	GridLayout:
+		cols:1
+		size: root.width, root.height
+		GridLayout:
+			cols:1
+			height: self.minimum_height
+			size_hint_y: None
+			height:40
+			canvas.before:
+				Color: 
+					rgba : 1,1,1,0.4
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			Label:
+				text:"Attendance Management System"
+				bold: True
+				font_size: "30sp"
+		GridLayout:
+			cols:1
+			height: self.minimum_height
+			size_hint_y: None
+			height:10
+		GridLayout:
+			cols:3
+			height: self.minimum_height
+			size_hint_y: None
+			height:20
+			Button:
+				id:new_user
+				text:"New User"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.newUser_btn(self.text)
+
+			Label:
+				text:""
+			Button:
+				id:exist_user
+				text:"Existing User"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.existUser_btn(self.text)
+        GridLayout:
+            cols:1
+            height: self.minimum_height
+            size_hint_y: None
+            height:50
+		GridLayout:
+			cols:9
+			size_hint_y: None
+			height:60
+			Label:
+				background_color:(1,0,0,1)
+				text:"Name"
+			TextInput:
+				id: name_input1
+				#multiline: False
+				text: ""
+			AnchorLayout:
+				anchor_x: 'center'
+				Button:
+					width:90
+					text:'Submit'
+					size_hint_x:None
+					on_press:
+						root.submit_btn(self.text)
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+
+		GridLayout:
+			cols:9
+			size_hint_y: None
+			height:60
+			Label:
+				background_color:(1,0,0,1)
+				text:"ID"
+			TextInput:
+				id: id_input2
+				#multiline: False
+				text: ""
+			AnchorLayout:
+				anchor_x: 'center'
+				Button:
+					width:90
+					text:'Submit'
+					size_hint_x:None
+					on_press:
+						root.submit_btn2(self.text)
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+		GridLayout:
+			cols:1
+			height: self.minimum_height
+			size_hint_y: None
+			height:50
+		GridLayout:
+			cols:5
+			height: self.minimum_height
+			size_hint_y: None
+			height:70
+			Button:
+				id:Take_i
+				text:"Take Images"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.TakeImages_btn()
+            Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Button:
+				id:FP_i
+				text:"open Webcam"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.FP_btn()
+        GridLayout:
+			cols:1
+			height: self.minimum_height
+			size_hint_y: None
+			height:10
+        GridLayout:
+			cols:5
+			height: self.minimum_height
+			size_hint_y: None
+			height:70
+			Button:
+				id:Train_i
+				text:"Train Images"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.TrainImages_btn()
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+			Label:
+				text:""
+        GridLayout:
+			cols:1
+			height: self.minimum_height
+			size_hint_y: None
+			height:70
+		GridLayout:
+			cols:7
+			height: self.minimum_height
+			size_hint_y: None
+			height:70
+			Label:
+				text:""
+			Button:
+				id:check_i
+				text:"Check Attendance"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.CheckAttendance_btn()
+            Label:
+            	text:""
+            Button:
+				id:hshs_id
+				text:"view Attendance"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.viewAttendance_btn()
+            Label:
+            	text:""
+			Button:
+				id:man_i
+				text:"Manullay Feed Attendance"
+				height: self.minimum_height
+                size_hint_y: None
+                height:40
+                on_press:
+                	root.manually_btn()
+            Label:
+            	text:""
